@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOOC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+    <link rel="stylesheet" href="/reset.323912cb.css">
+    <link rel="stylesheet" href="/style.ff1c4cab.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+</head>
+<body>
+
+<section class="secondpage">
+        <!-- <p>Pour débloquer les 70% des cours manquant, inscrivez vous !</p> -->
+        
+        <article class="secondpage__inscription">
+                <img class="secondpage__inscription--main_logo" src="/logo_dooc.cc6b868e.svg" alt="DOOC">
+            <div class="secondpage__inscription--boxlog">
+                <p class="secondpage__inscription--txtlog">S'incrire</p>
+            </div>
+            <div class="secondpage__inscription--boxlog">
+                <p class="secondpage__inscription--txtlog">Essayer Gratuitement</p>
+            </div>
+            <div class="secondpage__inscription--boxlog connecter" id="connexion" onclick="
+            $('#connexion').html('');
+            $('#connexion').css({
+                'margin-top': '0px',
+                'top': '0',
+                'left': '0',
+                'position': 'absolute',
+                'border-radius': '0%',
+            });
+            $('#connexion').animate({
+                width: '375px',
+            },1000);
+            $('#connexion').animate({
+                height: '100vh',
+            },500);
+            $('#connexion').html($('#connexionpart').html());
+            ">
+                <p class="secondpage__inscription--txtlog">Se connecter</p>
+            </div>
+        </article>
+        <!-- <div class="points">
+            <div class="rond active"></div>
+            <div class="rond"></div>
+            <div class="rond"></div>
+        </div> -->
+    </section>
+    <main style="display: none;" id="connexionpart">
+    <section class="thirdpage">
+            <div class="thirdpage__top">
+                <img class="thirdpage__top--img" src="/logo_dooc.cc6b868e.svg" alt="DOOC">
+                <p class="thirdpage__top--title">Connexion</p>
+            </div>
+            <article class="thirdpage__main">
+                <form action="page2.html" method="POST">
+                    <p class="thirdpage__main--label">E-mail</p>
+                    <input type="text" class="thirdpage__main--input" required="" name="mail">
+                    <p class="thirdpage__main--label">Mot de passe</p>
+                    <input type="password" class="thirdpage__main--input" required="" name="password">
+                    <div class="thirdpage__main--buttoncontenair"><input type="submit" class="thirdpage__main--button" value="C'est parti"></div>
+                </form>
+                <a href="/index2.html"><p class="back">Back</p></a>
+            </article>    
+            
+            <!-- <div class="points">
+                <div class="rond active"></div>
+                <div class="rond"></div>
+                <div class="rond"></div>
+            </div> -->
+        </section>
+    </main>
+    <script>$(document).ready(function () {});</script>
+    </body></html>

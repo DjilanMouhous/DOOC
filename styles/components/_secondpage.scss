@@ -1,0 +1,53 @@
+@import './components/variable';
+.secondpage{
+    position: relative;
+    z-index : 99;
+    background-color: $bleu;    
+    width: $width;
+    height: 100vh;
+    &__title{
+
+    }
+    &__inscription{
+        margin: auto;
+        text-align: center;
+        width: 272px;
+        padding-top: 20vh;
+        
+        &--main_logo{
+           
+            margin: auto;
+            width : 105px;
+            height : 105px;
+            margin-bottom: 40px;
+        }
+        &--boxlog{
+            background-color: white;
+            width: 271px;      
+            height: 46px;
+            border-radius: 15px;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &--txtlog{
+            font-size: 20px ;
+            color: $bleu ;
+            height: 27px;
+        }
+    }
+
+}
+
+.connecter{
+    margin-top: 70px;
+}
+.back{
+    text-align: center;
+    color: black;
+    margin-top : 25px;
+    font-size: 15px;
+    font-family: 'Helvetica';
+    text-decoration: underline;
+}

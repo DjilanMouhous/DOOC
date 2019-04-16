@@ -1,0 +1,30 @@
+@import './components/variable';
+.firstpage{
+    z-index: 100;
+    background-color: $bleu;    
+    width: $width;
+    height: 100vh;
+}
+.main_logo{
+    margin: auto;
+    width : 105px;
+    height : 105px;
+}
+
+.main{
+    
+    height: 40vh;
+    margin: auto;
+    width: 80%;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.baseline{
+    text-align: center;
+    color : white;
+    font-size: 30pt;
+    font-family: 'Pattaya', sans-serif;
+}
+
