@@ -66,7 +66,7 @@
         justify-content: center;
         font-size: 13px;
         font-weight: bold;
-        color: white;
+        
     }
     &--actif3{
         border-radius: 20px;
@@ -74,18 +74,6 @@
         color: white;
     }
 }
-}
-.whitecolor{
-    color: white;
-}
-#choix1{
-    color: $vert;
-}
-#choix2{
-    color: $jaune;
-}
-#choix3{
-    color: $violet;
 }
 #découverte{
     background-color: $vert;
@@ -96,11 +84,80 @@
 #diplomé{
     background-color: $violet;
 }
-.swiper-container{
-    width: 100%;
-    height: 100%;
+.whitecolor{
+    color: white;
 }
-.swiper-wrapper{
-    padding-left: initial;
-    margin: 0;
+.choix{
+        
+        color: white;
+}
+.choix1{
+    color: $vert;
+}
+.choix2{
+    color: $jaune;
+}
+.choix3{
+    color: $violet;
+}
+.decouverte{
+    border-radius: 20px;
+
+    background-color: $vert;
+    color: white;
+}
+.certifie{
+    border-radius: 20px;
+
+    background-color: $jaune;
+    color: white;
+}
+.diplome{
+    border-radius: 20px;
+
+    background-color: $violet;
+    color: white;
+}
+.decouverte1{
+
+    background-color: $vert;
+    color: white;
+}
+.certifie1{
+
+    background-color: $jaune;
+    color: white;
+}
+.diplome1{
+
+    background-color: $violet;
+    color: white;
+}
+.swiper-container {
+    width: 100%;
+    // position: relative;
+    height: 343px;
+  }
+  .slide-1 {
+    background: blue;
+  }
+  .slide-2 {
+    background: green;
+  }
+  .slide-3 {
+    background: red;
+  }
+  .slide-4 {
+    background: yellow;
+  }
+.arrow{
+    position: absolute;
+    bottom: 50%;
+    
+}
+.left{
+    left: 5%;
+}
+.right{
+    right: 5%;
 }

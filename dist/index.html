@@ -9,17 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
     <link rel="stylesheet" href="/reset.323912cb.css">
     <link rel="stylesheet" href="/style.ff1c4cab.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     
 <script src="/reset.323912cb.js"></script><script src="/style.ff1c4cab.js"></script><script src="/index2.js"></script></head>
 <body>
 <section class="firstpage" id="first" onclick="$('#first').fadeOut();">
     <div class="main">
-    <img class="main_logo" src="/logo_dooc.cc6b868e.svg" alt="DOOC">
+    <img class="main_logo animated pulse infinite" src="/logo_dooc.cc6b868e.svg" alt="DOOC">
     <p class="baseline">What's up Dooc ?</p>
     </div>
   
@@ -49,6 +49,7 @@
             setTimeout(function(){
                 $('#page2').html($('#inscriptionpart').html());
             }, 1500);
+            
             ">
                 <p class="secondpage__inscription--txtlog">S'incrire</p>
             </div>
@@ -91,7 +92,7 @@
                 <p class="thirdpage__top--title">Connexion</p>
             </div>
             <article class="thirdpage__main">
-                <form action="page2.html" method="POST">
+                <form action="accueil.html" method="POST">
                     <p class="thirdpage__main--label">E-mail</p>
                     <input type="text" class="thirdpage__main--input" required="" name="mail">
                     <p class="thirdpage__main--label">Mot de passe</p>
@@ -115,7 +116,7 @@
                 <p class="thirdpage__top--title">Inscription</p>
             </div>
             <article class="thirdpage__main">
-                <form action="page2.html" method="POST">
+                <form action="inscription.html" method="POST">
                     <p class="thirdpage__main--label">E-mail</p>
                     <input type="text" class="thirdpage__main--input" required="" name="mail">
                     <p class="thirdpage__main--label">Mot de passe</p>
@@ -129,7 +130,6 @@
                 
             <div class="points">
                 <div class="rond active"></div>
-                <div class="rond"></div>
                 <div class="rond"></div>
                 <div class="rond"></div>
             </div>
@@ -146,7 +146,7 @@
                         <p class="thirdpage__main--label">Nom</p>
                         <input type="password" class="thirdpage__main--input" required="" name="nom">
                         
-                        <div class="fourthpage__main--buttoncontenair"><input onclick="$('#ipart1').html($('#ipart3').html())" class="thirdpage__main--button" value="Suivant"></div>
+                        <div class="fourthpage__main--buttoncontenair"><input onclick="switchpart()" class="thirdpage__main--button" value="Suivant"></div>
                     
                     <a class="back" href="/index2.html"><p class="back">Back</p></a>
                 </article>    
@@ -155,35 +155,37 @@
                     <div class="rond"></div>
                     <div class="rond active"></div>
                     <div class="rond"></div>
-                    <div class="rond"></div>
                 </div>
             </section>
             <section style="display:none;" id="ipart3" class="fourthpage">
+
                     <article class="fourthpage__slider">
                         <div class="swiper-container">
-                        <ul class="swiper-wrapper">
-                        <li class="fourthpage__slider--bloc swiper-slide" id="découverte">
-                            <p class="fourthpage__slider--title">Découverte</p>
-                            <p class="fourthpage__slider--stitle">GRATUIT</p>
-                            <p class="fourthpage__slider--stitle">Accès limité</p>
-                            <p class="fourthpage__slider--txt">Accès au niveau 1 uniquement</p>
-                        </li>
-                        <li class="fourthpage__slider--bloc swiper-slide" id="certifié">
-                            <p class="fourthpage__slider--title">Certifié</p>
-                            <p class="fourthpage__slider--stitle">4,99€/mois </p>
-                            <p class="fourthpage__slider--stitle">Accès illimité</p>
-                            <p class="fourthpage__slider--txt">Accès aux exercices et à leurs correction<br>Accès à tous les niveaux</p>
-                        </li>
-                        <li class="fourthpage__slider--bloc swiper-slide" id="diplomé">
-                            <p class="fourthpage__slider--title">Diplomé</p>
-                            <p class="fourthpage__slider--stitle">Demander un RDV</p>
-                            <p class="fourthpage__slider--stitle">Accès illimité</p>
-                            <p class="fourthpage__slider--txt">Accès aux exercices et à leurs correction<br>Accès à tous les niveaux<br>Suivi par des professionnels <br>Un diplome reconnu par l'Etat de niveau II</p>
-                        </li>
-                        </ul>
+                            <!-- <img src="" class="arrow left"> -->
+                            <ul class="swiper-wrapper">
+                                <li class="fourthpage__slider--bloc swiper-slide decouverte1">
+                                    <p class="fourthpage__slider--title">Découverte</p>
+                                    <p class="fourthpage__slider--stitle">GRATUIT</p>
+                                    <p class="fourthpage__slider--stitle">Accès limité</p>
+                                    <p class="fourthpage__slider--txt">Accès au niveau 1 uniquement</p>
+                                </li>
+                                <li class="fourthpage__slider--bloc swiper-slide certifie1" id="certifié">
+                                    <p class="fourthpage__slider--title">Certifié</p>
+                                    <p class="fourthpage__slider--stitle">4,99€/mois </p>
+                                    <p class="fourthpage__slider--stitle">Accès illimité</p>
+                                    <p class="fourthpage__slider--txt">Accès aux exercices et à leurs correction<br>Accès à tous les niveaux</p>
+                                </li>
+                                <li class="fourthpage__slider--bloc swiper-slide diplome1" id="diplomé">
+                                    <p class="fourthpage__slider--title">Diplomé</p>
+                                    <p class="fourthpage__slider--stitle">Demander un RDV</p>
+                                    <p class="fourthpage__slider--stitle">Accès illimité</p>
+                                    <p class="fourthpage__slider--txt">Accès aux exercices et à leurs correction<br>Accès à tous les niveaux<br>Suivi par des professionnels <br>Un diplome reconnu par l'Etat de niveau II</p>
+                                </li>
+                            </ul>
+                            <!-- <img src="" class="arrow right"> -->
                         </div>
-                        
                     </article>
+
                     <div class="fourthpage__slider--points">
                             <div id="découverte" class="fourthpage__slider--rond"></div>
                             <div id="certifié" class="fourthpage__slider--rond"></div>
@@ -191,18 +193,18 @@
                         </div>
                     <p class="fourthpage__stitle">Choix de formule</p>
                         <div class="fourthpage__choix">
-                            <div id="choix1" class="fourthpage__choix--bloc">
+                            <div id="choix1" onclick="surbrillance('1');" class="fourthpage__choix--bloc choix1">
                                 <p>Découverte</p>
                             </div>
-                            <div id="choix2" class="fourthpage__choix--bloc">
+                            <div onclick="surbrillance('2');" id="choix2" class="fourthpage__choix--bloc choix2">
                                 <p>Certifié</p>
                             </div>
-                            <div id="choix3" class="fourthpage__choix--bloc fourthpage__choix--actif3">
-                                <p class="whitecolor">Diplomé</p>
+                            <div onclick="surbrillance('3');" id="choix3" class="fourthpage__choix--bloc choix3">
+                                <p>Diplomé</p>
                             </div>
                         </div>
                     <article class="fourthpage__main">                            
-                            <div class="fourthpage__main--buttoncontenair"><input onclick="$('#ipart2').html($('#ipart3').html())" class="thirdpage__main--button" value="Suivant"></div>
+                            <div class="fourthpage__main--buttoncontenair"><input type="submit" class="thirdpage__main--button" value="Suivant"></div>
                         
                         <a class="back" href="/index2.html"><p class="back">Back</p></a>
                     </article>    
@@ -211,7 +213,6 @@
                         <div class="rond"></div>
                         <div class="rond "></div>
                         <div class="rond active"></div>
-                        <div class="rond"></div>
                     </div>
                 </section>
             </main>
@@ -219,13 +220,49 @@
   setTimeout(function () {
     $('#first').fadeOut();
   }, 2000);
-  var swiper = new Swiper('.fourthpage_slider', {
+});
+
+function surbrillance(i) {
+  document.getElementById('choix' + i).style.color = '';
+
+  if (i == 1) {
+    document.getElementById('choix' + i).classList.toggle('decouverte');
+    document.getElementById('choix' + i).classList.toggle('whitecolor');
+    document.getElementById('choix2').classList.remove('certifie');
+    document.getElementById('choix2').style.color = '#FFD10F';
+    document.getElementById('choix3').classList.remove('diplome');
+    document.getElementById('choix3').style.color = '#EC9DFF';
+  } else if (i == 2) {
+    document.getElementById('choix' + i).classList.toggle('certifie');
+    document.getElementById('choix' + i).classList.toggle('whitecolor');
+    document.getElementById('choix1').style.color = '#55C73A';
+    document.getElementById('choix3').style.color = '#EC9DFF';
+    document.getElementById('choix1').classList.remove('decouverte');
+    document.getElementById('choix3').classList.remove('diplome');
+  } else {
+    document.getElementById('choix' + i).classList.toggle('diplome');
+    document.getElementById('choix1').classList.remove('decouverte');
+    document.getElementById('choix' + i).classList.toggle('whitecolor');
+    document.getElementById('choix1').style.color = '#55C73A';
+    document.getElementById('choix2').style.color = '#FFD10F';
+    document.getElementById('choix2').classList.remove('certifie');
+  }
+}
+
+function switchpart() {
+  $('#ipart1').html($('#ipart3').html());
+  var swiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     slidesPerView: 1,
     paginationClickable: true,
     height: 343,
-    spaceBetween: 0
+    spaceBetween: 0,
+    on: {
+      init: function init() {
+        console.log('swiper initialized');
+      }
+    }
   });
-});</script>
+}</script>
     
     </body></html>
